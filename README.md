@@ -35,19 +35,22 @@ Calculates monthly transition matrices between D/L/H states to simulate realisti
 For each day in the simulation period, KDE is used to generate a plausible precipitation value matching its classified state (D/L/H).
 
 5. 🤖 XGBoost Classifier:
-An XGBoost model is trained on labeled historical flood periods to:
+An XGBoost model is trained on labeled historical flood periods fromm local data to:
 * Learn rainfall sequences that precede heavy storms and flash floods
 * Identify similar sequences in the provided synthetic data
 
 6. 📈 Visualization:
 Displays the synthetic rainfall graph of the given simulation period which showcases the predicted heavy storm periods and flash flood warnings
 
-### Features
-
-### How we built it
-
 ### What’s next for HighDiLao
+* 📊 Incorporate more climate variables (humidity, wind speed, temperature etc.)
+* 🗺️ Expand beyond Singapore to a more global scale (with access to more weather stations) so as to simulate other flood-prone cities
+* 📡 Add real-time alerting or IoT sensor integration
+* 💻 Deploy as a web-based  support tool for the public, government and urban planners
+* ✅ Benchmark against traditional models to validate accuracy and show that HighDiLao's synthetic data outperforms older methods in precision
+* 🛰️ Integrate satellite imagery data with synthetic precipitation to enhance realism and accuracy -> hybrid approaches where GANs (Generative Adversarial Networks) can be used to learn from both image-based and numerical data sources for more powerful climate simulations
 
-### Acknowledgements
+### Resources
+* https://meteostat.net/en/
 
 
