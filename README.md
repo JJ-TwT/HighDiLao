@@ -1,6 +1,8 @@
 # HighDiLao
+## A synthetic weather data generator and flood detection system
 Xylem Global Student Innovation Challenge 2025
-[intro]
+
+HighDiLao is a synthetic weather data generator 
 
 ### Set up
 * Libraries
