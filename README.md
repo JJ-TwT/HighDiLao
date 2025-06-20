@@ -19,40 +19,29 @@ Our goal is to simulate realistic rainfall data and predict flood-prone periods,
   pip install scikit-learn
   pip install xgboost
   ```
-### What it does
-1. Historical Weather Data Retrieval
-Uses the Meteostat API to pull daily precipitation data for Singapore (2021–2025).
+### Features
+1. 🌧️ Historical Weather Data Retrieval using the Meteostat API to pull daily precipitation data for Singapore (2021–2025).
 
-2. Precipitation State Classification
+2. 📝 Precipitation State Classification:
 Each day is classified into:
-
-D – Dry (rainfall < 1mm)
-
-L – Light (1mm ≤ rainfall < 10mm)
-
-H – Heavy (rainfall ≥ 10mm)
-
-3. Monthly Markov Chain Model
+* D – Dry (rainfall < 1mm)
+* L – Light (1mm ≤ rainfall < 10mm)
+* H – Heavy (rainfall ≥ 10mm)
+  
+3. 📅 Monthly Markov Chain Model:
 Calculates monthly transition matrices between D/L/H states to simulate realistic weather state transitions over time.
 
-4. Kernel Density Estimation (KDE)
-For each month, KDE is used to generate a plausible precipitation value matching its classified state (D/L/H).
+4. 🔢 Kernel Density Estimation (KDE):
+For each day in the simulation period, KDE is used to generate a plausible precipitation value matching its classified state (D/L/H).
 
-5. XGBoost Classifier
+5. 🤖 XGBoost Classifier:
 An XGBoost model is trained on labeled historical flood periods to:
+* Learn rainfall sequences that precede heavy storms and flash floods
+* Identify similar sequences in the provided synthetic data
 
-Learn rainfall sequences that precede heavy storms
+6. 📈 Visualization:
+Displays the synthetic rainfall graph of the given simulation period which showcases the predicted heavy storm periods and flash flood warnings
 
-Identify similar sequences in synthetic data
-
-6. Visualization
-Displays:
-
-Blue line: Daily rainfall
-
-Orange dots: Flash flood warnings (rainfall > 20mm)
-
-Green shaded areas: Predicted heavy storm periods
 ### Features
 
 ### How we built it
